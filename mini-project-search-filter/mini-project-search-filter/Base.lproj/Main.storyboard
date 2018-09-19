@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SVh-UI-nA4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Grid View-->
+        <scene sceneID="GF7-ap-8c9">
+            <objects>
+                <viewController title="Grid View" id="Vpb-WP-PEY" customClass="ViewController" customModule="mini_project_search_filter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="to1-HT-dcE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XeE-Gu-pX3">
+                                <rect key="frame" x="0.0" y="44" width="375" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r3e-Ya-Tk7">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="iZU-VY-s1g">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4o-IK-KeX">
+                                <rect key="frame" x="9" y="609" width="357" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.3076660994" blue="0.38778926489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9jt-jr-wPu"/>
+                                </constraints>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XeE-Gu-pX3" firstAttribute="trailing" secondItem="nqi-RJ-qEp" secondAttribute="trailing" id="3KK-fV-NFU"/>
+                            <constraint firstItem="W4o-IK-KeX" firstAttribute="leading" secondItem="to1-HT-dcE" secondAttribute="leading" constant="9" id="Eg7-RF-EB2"/>
+                            <constraint firstItem="nqi-RJ-qEp" firstAttribute="bottom" secondItem="W4o-IK-KeX" secondAttribute="bottom" constant="8" id="U6s-eV-5GF"/>
+                            <constraint firstItem="nqi-RJ-qEp" firstAttribute="trailing" secondItem="W4o-IK-KeX" secondAttribute="trailing" constant="9" id="bE0-M4-jN5"/>
+                            <constraint firstItem="XeE-Gu-pX3" firstAttribute="leading" secondItem="nqi-RJ-qEp" secondAttribute="leading" id="nad-nW-daw"/>
+                            <constraint firstItem="W4o-IK-KeX" firstAttribute="top" secondItem="XeE-Gu-pX3" secondAttribute="bottom" constant="20" id="u6a-aY-ad4"/>
+                            <constraint firstItem="XeE-Gu-pX3" firstAttribute="top" secondItem="to1-HT-dcE" secondAttribute="top" constant="44" id="zW2-UO-nw4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nqi-RJ-qEp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ohR-CY-vKr"/>
+                    <connections>
+                        <outlet property="collectionView" destination="XeE-Gu-pX3" id="cV8-9Q-scm"/>
+                        <outlet property="filterButton" destination="W4o-IK-KeX" id="Dp7-yI-qUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4T-m8-Ccx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="514" y="-224"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6x2-l8-PeF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SVh-UI-nA4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0jp-0t-UIc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vpb-WP-PEY" kind="relationship" relationship="rootViewController" id="jsF-UD-a1L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4SV-9k-Lde" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="-223"/>
+        </scene>
+    </scenes>
+</document>
